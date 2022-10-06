@@ -200,11 +200,19 @@ namespace CityManager1
         /// </returns>
         private IEnumerable<Building> GetValuableBuildings(int minValue)
         {
-            // /////////////////// //
-            // Implement this code //
-            // /////////////////// //
-            throw new NotImplementedException(
-                "Students should implement this method");
+            List<Building> result = new List<Building>();
+
+            // Go through each building and add it to the result list
+            // if its value is at least `minValue`
+            foreach (Building b in buildings)
+            {
+                if (b.Value >= minValue)
+                {
+                    result.Add(b);
+                }
+            }
+
+            return result;
         }
     }
 }
