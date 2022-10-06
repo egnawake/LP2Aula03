@@ -2,7 +2,7 @@ using System;
 
 namespace GameInterfaces
 {
-    public abstract class Unit
+    public abstract class Unit : IHasValue
     {
         private int movement;
         public virtual int Health { get; set; }
@@ -24,6 +24,11 @@ namespace GameInterfaces
 
             Console.WriteLine(
                 $"{this.GetType().Name} has moved {d} positions");
+        }
+
+        public bool Equals(IHasValue other)
+        {
+            return other.Value == Value;
         }
 
         public override string ToString() =>
