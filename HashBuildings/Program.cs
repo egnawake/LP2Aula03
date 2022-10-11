@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace HashBuildings
@@ -17,30 +17,31 @@ namespace HashBuildings
             Building mansion = new Building("Mansion", 500f, 8000f);
             Building university = new Building("University", 2000f, 5000f);
             Building fort = new Building("Fort", 300f, 750f);
+            Building anotherFort = new Building("Fort", 300f, 750f);
             Building market = new Building("Market", 700f, 1250f);
 
             list.Add(mansion);
             list.Add(university);
             list.Add(fort);
-            list.Add(fort);
+            list.Add(anotherFort);
             list.Add(market);
 
             stack.Push(mansion);
             stack.Push(university);
             stack.Push(fort);
-            stack.Push(fort);
+            stack.Push(anotherFort);
             stack.Push(market);
 
             queue.Enqueue(mansion);
             queue.Enqueue(university);
             queue.Enqueue(fort);
-            queue.Enqueue(fort);
+            queue.Enqueue(anotherFort);
             queue.Enqueue(market);
 
             set.Add(mansion);
             set.Add(university);
             set.Add(fort);
-            set.Add(fort);
+            set.Add(anotherFort);
             set.Add(market);
 
             PrintBuildings(list);
