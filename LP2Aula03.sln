@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager3", "CityManager
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager4", "CityManager4\CityManager4.csproj", "{CFAD6AA6-8ABE-4027-AD65-83C38CD6C325}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingCollections", "BuildingCollections\BuildingCollections.csproj", "{A2053182-8490-46B4-9C83-3A725FCD9899}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{CFAD6AA6-8ABE-4027-AD65-83C38CD6C325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFAD6AA6-8ABE-4027-AD65-83C38CD6C325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFAD6AA6-8ABE-4027-AD65-83C38CD6C325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2053182-8490-46B4-9C83-3A725FCD9899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2053182-8490-46B4-9C83-3A725FCD9899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2053182-8490-46B4-9C83-3A725FCD9899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2053182-8490-46B4-9C83-3A725FCD9899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
