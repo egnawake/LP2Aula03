@@ -34,6 +34,18 @@ namespace HashBuildings
                 + $"Value: {Value,8:f2}\n"
                 + $"Area: {Area,8:f2}";
         }
+
+        public override bool Equals(object obj)
+        {
+            Building other = obj as Building;
+            if (other == null) return false;
+            return other.Value == Value && other.Type == Type;
+        }
+
+        public override int GetHashCode()
+        {
+            return Type.GetHashCode() ^ Value.GetHashCode();
+        }
     }
 }
 
