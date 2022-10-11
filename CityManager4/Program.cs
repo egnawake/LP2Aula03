@@ -146,16 +146,45 @@ namespace CityManager4
             return floatInput;
         }
 
+        private string SortingMenu()
+        {
+            Console.WriteLine("Sorting Options");
+            Console.WriteLine("------------------");
+            Console.WriteLine("(T)ype (ascending)");
+            Console.WriteLine("T(y)pe (descending)");
+            Console.WriteLine("Other: sort by value");
+            Console.WriteLine("------------------");
+
+            return Console.ReadLine().Trim().ToLower();
+        }
+
         /// <summary>
         /// List all buildings.
         /// </summary>
         private void ListBuildings()
         {
+            string sortingOption;
+            CompareByType comparer;
+
+            sortingOption = SortingMenu();
+
+            switch (sortingOption)
+            {
+                case "t":
+                    comparer = new CompareByType(true);
+                    buildings.Sort(comparer);
+                    break;
+                case "y":
+                    comparer = new CompareByType(false);
+                    buildings.Sort(comparer);
+                    break;
+                default:
+                    buildings.Sort();
+                    break;
+            }
+
             // Show building list
             Console.WriteLine("==== Building List ====");
-
-            // Sort list before showing
-            buildings.Sort();
 
             foreach (Building building in buildings)
             {
