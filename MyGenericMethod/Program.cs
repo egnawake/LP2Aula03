@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MyGenericMethod
 {
@@ -28,6 +29,15 @@ namespace MyGenericMethod
 
                 prev = v;
             }
+
+            Console.WriteLine("{0} military units",
+                CountValuablesOfType<MilitaryUnit>(valuables));
+
+            Console.WriteLine("{0} buildings",
+                CountValuablesOfType<Building>(valuables));
+
+            Console.WriteLine("{0} settlers",
+                CountValuablesOfType<SettlerUnit>(valuables));
         }
 
         private static int CountValuablesOfType<T>(
