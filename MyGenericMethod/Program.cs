@@ -29,5 +29,18 @@ namespace MyGenericMethod
                 prev = v;
             }
         }
+
+        private static int CountValuablesOfType<T>(
+            IEnumerable<IHasValue> valuables) where T : IHasValue
+        {
+            int count = 0;
+
+            foreach (IHasValue v in valuables)
+            {
+                if (v is T) count++;
+            }
+
+            return count;
+        }
     }
 }
