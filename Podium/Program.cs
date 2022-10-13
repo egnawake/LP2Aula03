@@ -14,6 +14,19 @@ namespace Podium
             buildingPodium.Add(new Building("Building5", 1350f, 675f));
 
             Podium<int> intPodium = new Podium<int>(5) { 8, 4, 17, 23, 2, 5, 11 };
+
+            Console.WriteLine("Buildings podium:");
+            foreach (Building b in buildingPodium)
+            {
+                Console.WriteLine(b);
+            }
+            Console.WriteLine("");
+
+            Console.WriteLine("Integers podium");
+            foreach (int i in intPodium)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
